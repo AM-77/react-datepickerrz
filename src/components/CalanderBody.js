@@ -38,11 +38,21 @@ class CalanderBody extends Component {
     }
 
     renderDays = () => {
-        const { onDateChange } = this.props
+        const { onDateChange, activeColor } = this.props
         const { daysCount, date } = this.state
         let days = []
         for(let i = 0; i < daysCount; i++){
-            days.push(<div key={i} onClick={() => onDateChange({...date, d: i + 1 })} className={`${styles.day} ${ i+1 === date.d ? styles.active : `` }`}><div className={styles.day_contianer}><p className={styles.day_text}>{ i + 1 }</p></div></div>)
+            days.push(<div 
+                            key={i} 
+                            onClick={() => onDateChange({...date, d: i + 1 })} 
+                            className={`${styles.day} ${ i+1 === date.d ? styles.active : `` }`} >
+                                <div 
+                                    className={styles.day_contianer}
+                                    style={ i+1 === date.d ? {backgroundColor: activeColor} : {}} >
+                                    <p className={styles.day_text}>{ i + 1 }</p>
+                                </div>
+                        </div>
+                    )
         }
         return days
     }

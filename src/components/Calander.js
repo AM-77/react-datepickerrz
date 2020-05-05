@@ -8,12 +8,12 @@ import styles from '../styles.css'
 
 class Calander extends Component {
     render() {
-        const { date, lang, onDateChange, display} = this.props
+        const { date, lang, onDateChange, display, activeColor} = this.props
         return (<React.Fragment>
             {
                 display && <div className={styles.calander_container}>
                     <CalanderHead lang={lang} date={date} onDateChange={onDateChange}/>
-                    <CalanderBody date={date} onDateChange={onDateChange} />
+                    <CalanderBody date={date} onDateChange={onDateChange} activeColor={activeColor} />
                 </div> 
             }
             </React.Fragment>
