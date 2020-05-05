@@ -62,28 +62,43 @@ class DatePicker extends Component {
     }
 
     render() {
-        const { inputStyle, lang } = this.props
+        const { inputStyle, lang, activeColor, darkTheme } = this.props
         const { date } = this.state
 
         return (
-            <div ref={this.datepickerRef} className={styles.react_datepick}>            
+            <div ref={this.datepickerRef} className={`${styles.react_datepick} ${ darkTheme ? styles.dark : '' }`}>            
                 <DateInput onInputFocus={this.onInputFocus} date={date} inputStyle={inputStyle} onDateChange={this.onDateChange} />
-                <Calander display={this.state.isInputFocus} lang={lang} date={date} onDateChange={this.onDateChange} />
+                <Calander display={this.state.isInputFocus} lang={lang} date={date} onDateChange={this.onDateChange} activeColor={activeColor}/>
             </div>
         )
     }
 }
 
 DatePicker.defaultProps = {
+    inputStyle: `
+        padding: 5px 8px;
+        border: 1px solid rgba(33, 33, 33, 0.25);
+        background-color: #f8f9fa;
+        font-size: 14px;
+        border-radius: 3px;
+        outline: none;
+        width: 200px;
+        text-align: center;
+        box-shadow: rgba(33, 33, 33, 0.5) 0px 0px 4px -2px;
+    `,
+    activeColor: '#119955',
+    darkTheme: false,
     date: new Date(),
     lang: "en"
 }
   
 DatePicker.propTypes = {
     inputStyle: PropTypes.string,
-    onPickDate: PropTypes.func.isRequired,
+    activeColor: PropTypes.string,
+    darkTheme: PropTypes.bool,
     date: PropTypes.string,
-    lang: PropTypes.string
+    lang: PropTypes.string,
+    onPickDate: PropTypes.func.isRequired
 }
   
 export default DatePicker
