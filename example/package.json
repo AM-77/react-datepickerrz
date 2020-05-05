@@ -5,9 +5,10 @@
   "private": true,
   "dependencies": {
     "react": "link:../node_modules/react",
+    "react-color": "^2.18.1",
+    "react-datepick": "link:..",
     "react-dom": "link:../node_modules/react-dom",
-    "react-scripts": "link:../node_modules/react-scripts",
-    "react-datepick": "link:.."
+    "react-scripts": "link:../node_modules/react-scripts"
   },
   "scripts": {
     "start": "node ../node_modules/react-scripts/bin/react-scripts.js start",
