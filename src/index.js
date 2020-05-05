@@ -16,6 +16,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 import { date2dmy, str2dmy } from './util/date'
+import parseCSS from './util/css'
 
 import DateInput from './components/DateInput'
 import Calander from './components/Calander'
@@ -62,12 +63,12 @@ class DatePicker extends Component {
     }
 
     render() {
-        const { inputStyle, lang, activeColor, darkTheme } = this.props
+        const { inputStyle, lang, activeColor, dark } = this.props
         const { date } = this.state
 
         return (
-            <div ref={this.datepickerRef} className={`${styles.react_datepick} ${ darkTheme ? styles.dark : '' }`}>            
-                <DateInput onInputFocus={this.onInputFocus} date={date} inputStyle={inputStyle} onDateChange={this.onDateChange} />
+            <div ref={this.datepickerRef} className={`${styles.react_datepick} ${dark ? styles.dark_theme : styles.light_theme}`} >            
+                <DateInput onInputFocus={this.onInputFocus} date={date} inputStyle={parseCSS(inputStyle)} onDateChange={this.onDateChange} />
                 <Calander display={this.state.isInputFocus} lang={lang} date={date} onDateChange={this.onDateChange} activeColor={activeColor}/>
             </div>
         )
@@ -87,7 +88,7 @@ DatePicker.defaultProps = {
         box-shadow: rgba(33, 33, 33, 0.5) 0px 0px 4px -2px;
     `,
     activeColor: '#119955',
-    darkTheme: false,
+    dark: false,
     date: new Date(),
     lang: "en"
 }
@@ -95,7 +96,7 @@ DatePicker.defaultProps = {
 DatePicker.propTypes = {
     inputStyle: PropTypes.string,
     activeColor: PropTypes.string,
-    darkTheme: PropTypes.bool,
+    dark: PropTypes.bool,
     date: PropTypes.string,
     lang: PropTypes.string,
     onPickDate: PropTypes.func.isRequired
