@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 :root{
   --box-shadow-color: rgba(33, 33, 33, 0.5);
 }
@@ -24,6 +26,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
 .react_datepick  *::selection{
@@ -34,7 +37,11 @@
   fill: var(--second-color);
 }
 
-.react_datepick  {
+.react_datepick_container {
+  display: flex;
+}
+
+.react_datepick {
   position: relative;
 }
 
@@ -44,11 +51,11 @@
 }
 
 .react_datepick  .input_field{
-  padding: 6px 0px;
+  padding: 5px 0px;
   border: 1px solid var(--border-color);
   background-color: var(--main-color);
   color: var(--second-color);
-  font-size: 16px;
+  font-size: 15px;
   border-radius: 3px;
   outline: none;
   width: 210px;
@@ -89,7 +96,7 @@
 .react_datepick  .calander_header_container {
   display: flex;
   flex-direction: column;
-  font-size: 15px;
+  font-size: 14px;
   color: var(--second-color);
   height: 60px;
   padding: 5px;

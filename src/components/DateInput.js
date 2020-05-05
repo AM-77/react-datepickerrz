@@ -20,8 +20,8 @@ class DateInput extends Component {
     
     componentDidUpdate(prevProps){
         if(prevProps !== this.props){
-            const { date } = this.props
-            this.setState((state) => ({date, inputValue: dmy2str(date)}))
+            const { date, inputStyle } = this.props
+            this.setState((state) => ({date, inputValue: dmy2str(date), inputStyle}))
         }
     }
 
