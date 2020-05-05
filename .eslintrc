@@ -1,0 +1,26 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "standard",
+    "standard-react"
+  ],
+  "env": {
+    "es6": true
+  },
+  "plugins": [
+    "react"
+  ],
+  "parserOptions": {
+    "sourceType": "module",
+    "allowImportExportEverywhere": true
+  },
+  "rules": {
+    "space-before-function-paren": 0,
+    "import/first": 0
+  },
+  "globals": {
+    "TimeoutID": true,
+    "IntervalID": true,
+    "AnimationFrameID": true,
+  }
+}
