@@ -76,17 +76,7 @@ class DatePicker extends Component {
 }
 
 DatePicker.defaultProps = {
-    inputStyle: `
-        padding: 5px 8px;
-        border: 1px solid rgba(33, 33, 33, 0.25);
-        background-color: #f8f9fa;
-        font-size: 14px;
-        border-radius: 3px;
-        outline: none;
-        width: 200px;
-        text-align: center;
-        box-shadow: rgba(33, 33, 33, 0.5) 0px 0px 4px -2px;
-    `,
+    inputStyle: ``,
     activeColor: '#119955',
     dark: false,
     date: new Date(),

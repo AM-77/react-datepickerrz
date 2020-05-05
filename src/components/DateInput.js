@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+
 import { dateFormater, dmy2str } from '../util/date'
+
+import styles from '../styles.css'
 
 class DateInput extends Component {
 
@@ -41,7 +44,7 @@ class DateInput extends Component {
         const { onInputFocus } = this.props
         const { inputStyle, inputValue } = this.state
         return (
-            <input onFocus={onInputFocus} onChange={this.onInputChange} type="text" value={inputValue} style={inputStyle} maxLength="10" placeholder='dd/mm/yyyy' />
+            <input className={styles.input_field} onFocus={onInputFocus} onChange={this.onInputChange} type="text" value={inputValue} style={inputStyle} maxLength="10" placeholder='dd/mm/yyyy' />
         )
     }
 }

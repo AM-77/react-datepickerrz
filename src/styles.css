@@ -1,15 +1,13 @@
 :root{
-  --box-shadow-color: rgba(33, 33, 33, 0.5)
+  --box-shadow-color: rgba(33, 33, 33, 0.5);
 }
 
 .light_theme{
   --main-color: rgb(245, 245, 245);
   --light-main-color: rgb(254, 254, 254);
   --second-color: rgba(54, 54, 54, 1);
-  --faded-10-second-color: rgba(154, 154, 154, 0.1);
-  --faded-25-second-color: rgba(154, 154, 154, 0.25);
-  --faded-50-second-color: rgba(154, 154, 154, 0.5);
-  --faded-75-second-color: rgba(154, 154, 154, 0.75);
+  --day-bg-color: rgba(154, 154, 154, 0.1);
+  --border-color: rgba(154, 154, 154, 0.5);
   --control-background: rgba(33, 33, 33, 0.15);
 }
 
@@ -17,10 +15,8 @@
   --main-color: rgb(26, 26, 26);
   --light-main-color: rgb(36, 36, 37);
   --second-color: rgb(195, 195, 195);
-  --faded-10-second-color: rgba(0, 0, 0, 0.1);
-  --faded-25-second-color: rgba(0, 0, 0, 0.25);
-  --faded-50-second-color: rgba(0, 0, 0, 0.5);
-  --faded-75-second-color: rgba(0, 0, 0, 0.75);
+  --day-bg-color: rgba(0, 0, 0, 0.1);
+  --border-color: rgba(0, 0, 0, 0.5);
   --control-background: rgba(255, 255, 255, 0.15);
 }
 
@@ -34,11 +30,6 @@
   background: transparent
 }
 
-.react_datepick  input::selection{
-  background-color: var(--faded-75-second-color);
-  color: var(--main-color)
-}
-
 .icons {
   fill: var(--second-color);
 }
@@ -47,14 +38,32 @@
   position: relative;
 }
 
+.react_datepick  .input_field::selection{
+  background-color: var(--second-color);
+  color: var(--main-color)
+}
+
+.react_datepick  .input_field{
+  padding: 6px 0px;
+  border: 1px solid var(--border-color);
+  background-color: var(--main-color);
+  color: var(--second-color);
+  font-size: 16px;
+  border-radius: 3px;
+  outline: none;
+  width: 210px;
+  text-align: center;
+  box-shadow: var(--box-shadow-color) 0px 0px 4px -2px;
+}
+
 .react_datepick  .calander_container {
   display: inline-flex;
   flex-direction: column;
   width: 100%;
   position: absolute;
-  top: 48px;
+  top: 50px;
   left: 0px;
-  border: 1px solid var(--faded-25-second-color);
+  border: 1px solid var(--border-color);
   background-color: var(--main-color);
   font-size: 15px;
   border-radius: 3px;
@@ -67,8 +76,8 @@
   width: 16px;
   height: 16px;
   background-color: var(--main-color);
-  border-left: 1px solid var(--faded-25-second-color);
-  border-top: 1px solid var(--faded-25-second-color);
+  border-left: 1px solid var(--border-color);
+  border-top: 1px solid var(--border-color);
   border-top-left-radius: 3px;
   position: absolute;
   left: calc(50% - 6px);
@@ -195,8 +204,8 @@
 }
 
 .react_datepick .calander_body_container .days_container .day .day_contianer:hover{
-  background-color: var(--faded-10-second-color);
-  border: 1px solid var(--faded-25-second-color);
+  background-color: var(--day-bg-color);
+  border: 1px solid var(--border-color);
   box-shadow: var(--box-shadow-color) 0px 0px 2px 0px;
 }
 
@@ -211,6 +220,6 @@
 }
 
 .react_datepick .calander_body_container .days_container .day.active .day_contianer{
-  border: 1px solid var(--faded-25-second-color);
+  border: 1px solid var(--border-color);
   box-shadow: var(--box-shadow-color) 0px 0px 2px 0px;
 }
