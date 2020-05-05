@@ -46,23 +46,9 @@ class DateInput extends Component {
         )
     }
 }
-
-DateInput.defaultProps = {
-    inputStyle: `
-        padding: 5px 8px;
-        border: 1px solid rgba(33, 33, 33, 0.25);
-        background-color: #f8f9fa;
-        font-size: 14px;
-        border-radius: 3px;
-        outline: none;
-        width: 180px;
-        text-align: center;
-        box-shadow: rgba(33, 33, 33, 0.5) 0px 0px 4px -2px;
-    `
-}
   
 DateInput.propTypes = {
-    inputStyle: PropTypes.string,
+    inputStyle: PropTypes.string.isRequired,
     onDateChange: PropTypes.func.isRequired,
     date: PropTypes.object.isRequired,
     onInputFocus: PropTypes.func.isRequired
