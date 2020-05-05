@@ -40,14 +40,18 @@ const dateFormater = date => {
 
 const months = {
     en: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
-    fr: ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"]
+    fr: ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"],
+    es: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
+    de: ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"],
+    it: ["Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno", "Luglio", "Agosto", "Settembre", "Ottobre", "Novembre", "Dicembre"]
 }
-
-
 
 const days = {
     en: ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"],
-    fr: ["Di", "Lu", "Ma", "Me", "Je", "Ve", "Sa"]
+    fr: ["Di", "Lu", "Ma", "Me", "Je", "Ve", "Sa"],
+    es: ["Do", "Lu", "Ma", "Mi", "Ju", "Vi", "Sá"],
+    de: ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"],
+    it: ["Do", "Lu", "Ma", "Me", "Gi", "Ve", "Sa"]
 }
 
 const addMonth = ({d, m, y}) => ((m === 12) ? ({d, m: 1, y: y + 1}) : ({d, m: m + 1, y}))
