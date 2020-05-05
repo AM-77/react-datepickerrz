@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import parseCSS from '../util/css'
 import { dateFormater, dmy2str } from '../util/date'
 
 class DateInput extends Component {
@@ -10,7 +9,7 @@ class DateInput extends Component {
 
         const { date, inputStyle } = this.props
         this.state={
-            inputStyle: parseCSS(inputStyle),
+            inputStyle,
             date,
             inputValue: dmy2str(date)
         }
@@ -48,7 +47,7 @@ class DateInput extends Component {
 }
   
 DateInput.propTypes = {
-    inputStyle: PropTypes.string.isRequired,
+    inputStyle: PropTypes.object.isRequired,
     onDateChange: PropTypes.func.isRequired,
     date: PropTypes.object.isRequired,
     onInputFocus: PropTypes.func.isRequired
