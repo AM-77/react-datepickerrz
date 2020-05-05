@@ -8,6 +8,7 @@ const parseCSS = css => {
     let length = cssProps.length, prop_val
     for(let i = 0; i < length; i++){
         prop_val = cssProps[i].split(":")
+        if (prop_val.length !== 2) {}
         cssObject[toCamelCase(prop_val[0].trim())] = prop_val[1].trim()
     }
     return cssObject
