@@ -10,7 +10,7 @@
 
 .react_datepick  input::selection{
   background-color: #009688;
-  color: #f1f2f3
+  color: #f8f9fa
 }
 
 .react_datepick  {
@@ -25,7 +25,7 @@
   top: 48px;
   left: 0px;
   border: 1px solid rgba(33, 33, 33, 0.25);
-  background-color: #f1f2f3;
+  background-color: #f8f9fa;
   font-size: 15px;
   border-radius: 3px;
   box-shadow: rgba(33, 33, 33, 0.5) 0px 0px 4px -2px;
@@ -36,7 +36,7 @@
   content: '';
   width: 16px;
   height: 16px;
-  background-color: #f1f2f3;
+  background-color: #f8f9fa;
   border-left: 1px solid rgba(33, 33, 33, 0.25);
   border-top: 1px solid rgba(33, 33, 33, 0.25);
   border-top-left-radius: 3px;
@@ -177,17 +177,10 @@
 }
 
 .react_datepick .calander_body_container .days_container .day.active .day_text{
-  color: #fff;
+  color: #f8f9fa;
 }
 
 .react_datepick .calander_body_container .days_container .day.active .day_contianer{
-  background-color: #009688;
-  border: 1px solid rgba(33, 33, 33, 0.25);
-  box-shadow: rgba(33, 33, 33, 0.5) 0px 0px 2px 0px;
-}
-
-.react_datepick .calander_body_container .days_container .day.active .day_contianer:hover{
-  background-color: #009688;
   border: 1px solid rgba(33, 33, 33, 0.25);
   box-shadow: rgba(33, 33, 33, 0.5) 0px 0px 2px 0px;
 }
