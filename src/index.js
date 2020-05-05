@@ -1,3 +1,12 @@
+/**
+* @param {string} inputStyle custom style for the date input       
+* @param {string} activeColor custom color for the selected date
+* @param {boolean} dark toggle the dark theme      
+* @param {(string | Date)} date the default value
+* @param {string} lang the langauge of the calander        
+* @param {func} onPickDate on date pick handler     
+*/
+
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
@@ -27,11 +36,7 @@ class DatePicker extends Component {
 
     componentDidUpdate(prevProps){
         if(prevProps !== this.props){
-            this.setState((state) => ({
-                ...state,
-                ...this.props,
-                date: (typeof this.props.date === "string") ? str2dmy(this.props.date) : date2dmy(this.props.date),
-            }))
+            this.setState((state) => ({ inputStyle: this.props.inputStyle }))
         }
     }
 
@@ -86,7 +91,7 @@ DatePicker.propTypes = {
     inputStyle: PropTypes.string,
     activeColor: PropTypes.string,
     dark: PropTypes.bool,
-    date: PropTypes.string || PropTypes.object,
+    date: PropTypes.string || PropTypes.instanceOf(Date),
     lang: PropTypes.string,
     onPickDate: PropTypes.func.isRequired
 }
