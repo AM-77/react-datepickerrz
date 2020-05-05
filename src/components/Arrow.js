@@ -1,14 +1,15 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import styles from '../styles.css'
 
 class Arrow extends Component {
     render() {
-        const { left, fill, double } = this.props
+        const { left, double } = this.props
         return (
             <React.Fragment>
                 {
                     double ?
-                        <svg fill={fill} x="0px" y="0px" viewBox="0 0 480 480" style={left ? { transform: 'rotate(180deg)' } : {}}> 
+                        <svg className={styles.icons} x="0px" y="0px" viewBox="0 0 480 480" style={left ? { transform: 'rotate(180deg)' } : {}}> 
                             <g>
                                 <g>
                                     <path d="M475.922,229.325l-144-160c-3.072-3.392-7.36-5.312-11.904-5.312h-96c-6.304,0-12.032,3.712-14.624,9.472
@@ -27,7 +28,7 @@ class Arrow extends Component {
                             </g>
                         </svg>
                         :
-                        <svg fill={fill} x="0px" y="0px" viewBox="0 0 240 480" style={left ? { transform: 'rotate(180deg)' } : {}}>
+                        <svg className={styles.icons} x="0px" y="0px" viewBox="0 0 240 480" style={left ? { transform: 'rotate(180deg)' } : {}}>
                             <g>
                                 <path d="M267.922,229.325l-144-160c-3.072-3.392-7.36-5.312-11.904-5.312h-96c-6.304,0-12.032,3.712-14.624,9.472
                                     c-2.56,5.792-1.504,12.544,2.72,17.216l134.368,149.312L4.114,389.293c-4.224,4.704-5.312,11.456-2.72,17.216
@@ -43,13 +44,11 @@ class Arrow extends Component {
 
 Arrow.defaultProps = {
     left: false,
-    fill: "#212121",
     double: false,
 }
 
 Arrow.propTypes = {
     left: PropTypes.bool,
-    fill: PropTypes.string,
     double: PropTypes.bool,
 }
   
