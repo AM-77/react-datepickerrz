@@ -5,6 +5,13 @@
 [![NPM](https://img.shields.io/npm/v/react-datepick.svg)](https://www.npmjs.com/package/react-datepick) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 
+
+|                Default                |              Dark               |               Custom                |
+| :-----------------------------------: | :-----------------------------: | :---------------------------------: |
+| ![default](./screenshots/default.png) | ![dark](./screenshots/dark.png) | ![custom](./screenshots/custom.png) |
+
+
+
 ## Install
 
 ```bash
@@ -29,9 +36,9 @@ export default class Example extends Component {
 
     onDatePick = date => {
         // the date object stucture => {
-        //     day: number,
-        //     month: number,
-        //     year: number,
+        //     day: number, 
+        //     month: number, // from 1 to 12
+        //     year: number, 
         //     date: Date
         // }
 
@@ -98,21 +105,6 @@ To run the exemple you need to:
 -   inside the example folder run: `yarn` or `npm i` then `yarn start` or `npm start`
 
 
-## Screenshots
-
-
-**default datepicker**
-
-![circular down 180 deg](./screenshots/down-180.gif)
-
-**dark datepicker**
-
-![circular customizable degree](./screenshots/270.gif)
-
-
-**customized datepicker input**
-
-![circular 360](./screenshots/360.gif)
 
 
 ## Contribution
