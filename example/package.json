@@ -1,12 +1,12 @@
 {
-  "name": "react-datepick-demo",
-  "homepage": "https://AM-77.github.io/react-datepick",
+  "name": "react-datepickerrz-demo",
+  "homepage": "https://AM-77.github.io/react-datepickerrz",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
     "react": "link:../node_modules/react",
     "react-color": "^2.18.1",
-    "react-datepick": "link:..",
+    "react-datepickerrz": "link:..",
     "react-dom": "link:../node_modules/react-dom",
     "react-scripts": "link:../node_modules/react-scripts"
   },

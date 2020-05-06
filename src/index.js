@@ -10,7 +10,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-import { date2dmy, str2dmy, date2str } from './util/date'
+import { date2dmy, str2dmy } from './util/date'
 import parseCSS from './util/css'
 
 import DateInput from './components/DateInput'
@@ -69,8 +69,8 @@ class DatePicker extends Component {
         const { date, inputStyle } = this.state
 
         return (
-            <div className={styles.react_datepick_container}>
-                <div ref={this.datepickerRef} className={`${styles.react_datepick} ${dark ? styles.dark_theme : styles.light_theme}`} >            
+            <div className={styles.react_datepickerrz_container}>
+                <div ref={this.datepickerRef} className={`${styles.react_datepickerrz} ${dark ? styles.dark_theme : styles.light_theme}`} >            
                     <DateInput onInputFocus={this.onInputFocus} date={date} inputStyle={parseCSS(inputStyle)} onDateChange={this.onDateChange} />
                     <Calander display={this.state.isInputFocus} lang={lang} date={date} onDateChange={this.onDateChange} activeColor={activeColor}/>
                 </div>

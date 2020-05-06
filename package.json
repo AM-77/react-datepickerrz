@@ -1,10 +1,10 @@
 {
-  "name": "react-datepick",
+  "name": "react-datepickerrz",
   "version": "1.0.0",
-  "description": "An a11y, customizable, zero-dependency datepicker component for React",
+  "description": "With double r & z, an a11y, customizable, zero-dependency datepicker component for React",
   "author": "AM-77",
-  "repository": "AM-77/react-datepick",
-  "homepage": "https://AM-77.github.io/react-datepick",
+  "repository": "AM-77/react-datepickerrz",
+  "homepage": "https://AM-77.github.io/react-datepickerrz",
   "keywords": [
     "react",
     "reactjs",

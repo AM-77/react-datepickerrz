@@ -1,8 +1,8 @@
-# react-datepick
+# react-datepickerrz
 
-> An a11y, customizable, zero-dependency datepicker component for React
+> With double r & z, an a11y, customizable, zero-dependency datepicker component for React
 
-[![NPM](https://img.shields.io/npm/v/react-datepick.svg)](https://www.npmjs.com/package/react-datepick) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/react-datepickerrz.svg)](https://www.npmjs.com/package/react-datepickerrz) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 
 
@@ -15,13 +15,13 @@
 ## Install
 
 ```bash
-npm install --save react-datepick
+npm install --save react-datepickerrz
 ```
 
 **or**
 
 ```bash
-yarn add react-datepick
+yarn add react-datepickerrz
 ```
 
 ## Usage
@@ -29,7 +29,7 @@ yarn add react-datepick
 ```jsx
 import React, { Component } from 'react'
 
-import DatePicker from 'react-datepick'
+import DatePicker from 'react-datepickerrz'
 
 
 export default class Example extends Component {
@@ -101,7 +101,7 @@ export default class Example extends Component {
 To run the exemple you need to:
 
 -   clone this repo 
--   inside the react-datepick folder run: `yarn` or `npm i` then `yarn build` or `npm build`
+-   inside the react-datepickerrz folder run: `yarn` or `npm i` then `yarn build` or `npm build`
 -   inside the example folder run: `yarn` or `npm i` then `yarn start` or `npm start`
 
 
@@ -109,8 +109,8 @@ To run the exemple you need to:
 
 ## Contribution
 
-Feel free to raise an [Issue](https://github.com/AM-77/react-datepick/issues) or submit a [PR](https://github.com/AM-77/react-datepick/pulls).
+Feel free to raise an [Issue](https://github.com/AM-77/react-datepickerrz/issues) or submit a [PR](https://github.com/AM-77/react-datepickerrz/pulls).
 
 ## Copyright and license
 
-Code copyright 2020 AM-77. Code released under [MIT license](https://github.com/AM-77/react-datepicks/blob/master/LICENSE).
+Code copyright 2020 AM-77. Code released under [MIT license](https://github.com/AM-77/react-datepickerrz/blob/master/LICENSE).

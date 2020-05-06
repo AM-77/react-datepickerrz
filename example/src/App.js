@@ -1,5 +1,5 @@
 import React from 'react'
-import DatePicker from 'react-datepick'
+import DatePicker from 'react-datepickerrz'
 import { TwitterPicker } from 'react-color'
 
 import './index.css'
@@ -48,7 +48,7 @@ class App extends React.Component {
     render(){
         return (
             <div className="container">
-                <h1>react-datepick demo</h1>
+                <h1>react-datepickerrz demo</h1>
                 <div className="content">
                     <div className='props'>
                         <div className="prop">
