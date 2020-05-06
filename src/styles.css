@@ -67,6 +67,7 @@
   display: inline-flex;
   flex-direction: column;
   width: 100%;
+  min-width: 180px;
   position: absolute;
   top: 50px;
   left: 0px;
