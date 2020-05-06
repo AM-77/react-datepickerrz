@@ -83,7 +83,7 @@ DatePicker.defaultProps = {
     inputStyle: ``,
     activeColor: '#119955',
     dark: false,
-    date: date2str(new Date()),
+    date: new Date(),
     lang: "en"
 }
   
