@@ -1,25 +1,26 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
+import DayCell from "./CalendarBodyDayCell";
 import { daysInMonth } from "../util/date";
 
 import styles from "../styles.css";
 
 function CalendarBody(props) {
-  const { propDate } = props;
-  const [date, setDate] = useState(propDate);
+  const { initDate } = props;
+  const [date, setDate] = useState(initDate);
   const [firstDay, setFirstDay] = useState(
-    new Date(propDate.y, propDate.m - 1, 1).getDay()
+    new Date(initDate.y, initDate.m - 1, 1).getDay()
   );
   const [daysCount, setDaysCount] = useState(
-    daysInMonth(propDate.y, propDate.m)
+    daysInMonth(initDate.y, initDate.m)
   );
 
   useEffect(() => {
-    const { propDate } = props;
-    setDate(propDate);
-    setFirstDay(new Date(propDate.y, propDate.m - 1, 1).getDay()),
-      setDaysCount(daysInMonth(propDate.y, propDate.m));
+    const { initDate } = props;
+    setDate(initDate);
+    setFirstDay(new Date(initDate.y, initDate.m - 1, 1).getDay()),
+      setDaysCount(daysInMonth(initDate.y, initDate.m));
   }, date);
 
   const renderEmptyDays = () => {
@@ -34,26 +35,10 @@ function CalendarBody(props) {
     return empty;
   };
 
-  const renderDays = () => {
-    const { onDateChange, activeColor } = props;
+  const renderDayCell = () => {
     let days = [];
     for (let i = 0; i < daysCount; i++) {
-      days.push(
-        <div
-          key={i}
-          onClick={() => onDateChange({ ...propDate, d: i + 1 })}
-          className={`${styles.day} ${
-            i + 1 === propDate.d ? styles.active : ``
-          }`}
-        >
-          <div
-            className={styles.day_contianer}
-            style={i + 1 === propDate.d ? { backgroundColor: activeColor } : {}}
-          >
-            <p className={styles.day_text}>{i + 1}</p>
-          </div>
-        </div>
-      );
+      days.push(<DayCell index={i} {...props} />);
     }
     return days;
   };
@@ -62,7 +47,7 @@ function CalendarBody(props) {
     <div className={styles.calander_body_container}>
       <div className={styles.days_container}>
         {renderEmptyDays()}
-        {renderDays()}
+        {renderDayCell()}
       </div>
     </div>
   );
