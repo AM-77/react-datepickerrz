@@ -4,11 +4,11 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "react": "link:../node_modules/react",
+    "react": "file:../node_modules/react",
     "react-color": "^2.18.1",
-    "react-datepickerrz": "link:..",
-    "react-dom": "link:../node_modules/react-dom",
-    "react-scripts": "link:../node_modules/react-scripts"
+    "react-datepickerrz": "file:..",
+    "react-dom": "file:../node_modules/react-dom",
+    "react-scripts": "file:../node_modules/react-scripts"
   },
   "scripts": {
     "start": "node ../node_modules/react-scripts/bin/react-scripts.js start",
