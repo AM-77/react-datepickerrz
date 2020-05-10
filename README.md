@@ -1,6 +1,6 @@
 # react-datepickerrz
 
-> With double r & z, an a11y, customizable, zero-dependency datepicker component for React
+> With double r & z, a customizable, zero-dependency datepicker component for React
 
 [![NPM](https://img.shields.io/npm/v/react-datepickerrz.svg)](https://www.npmjs.com/package/react-datepickerrz) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
