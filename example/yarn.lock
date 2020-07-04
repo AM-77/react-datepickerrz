@@ -8121,7 +8121,7 @@ react-color@^2.18.1:
     reactcss "^1.2.0"
     tinycolor2 "^1.4.1"
 
-"react-datepick@link:..":
+"react-datepickerrz@link:..":
   version "0.0.0"
   uid ""
 
