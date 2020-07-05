@@ -62,39 +62,58 @@ export default class Example extends Component {
 
 ## Props
 
+<table width="100%">
+<thead>
+<th>Props</th>
+<th>Types</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</thead>
+<tbody>
+<tr>
+<td>inputStyle</td>
+<td><code>string</code></td>
+<td><code>false</code></td>
+<td><code>empty</code></td>
+<td><quote>The custom style of the input field</quote></td>
+</tr>
+<tr>
+
+<td>activeColor</td>
+<td><code>string </code></td>
+<td><code>false</code></td>
+<td><code>#119955</code></td>
+<td><quote>The background color of the selected date on the calendar</quote></td>
+</tr>
+
+<tr>
+<td>date</td>
+<td><code>string | Date</code></td>
+<td><code>false</code></td>
+<td><code>new Date()</code></td>
+<td><quote>The default value of the datepicker</quote></td>
+</tr>
 
 
-##### inputStyle
+<tr>
+<td>lang</td>
+<td><code>string</code></td>
+<td><code>false</code></td>
+<td><code>en</code></td>
+<td><quote>The datepicker langauge, supported languages: [en, fr, it, es, de]</quote></td>
+</tr>
 
-`type: string, isRequired: false, default: empty'`
+<tr>
+<td>onPickDate</td>
+<td><code>function</code></td>
+<td><code>true</code></td>
+<td><code>/</code></td>
+<td><quote>The date change handler</quote></td>
+</tr>
+</tbody>
 
-	The custom style of the input field
-
-##### activeColor
-
-`type: string, isRequired: false, default: '#119955'`
-
-	The bg color of the selected date on the calander
-
-##### date
-
-`type: string | Date, isRequired: false, default: new Date()`
-
-	The default value of the datepicker
-
-##### lang
-
-`type: string, isRequired: false, default: 'en'`
-
-	The datepicker langauge, supported languages: [en, fr, it, es, de]
-
-
-##### onPickDate
-
-`type:  funcion, isRequired: true`
-
-	The date change handler
-
+</table>
 
 ## Examples
 

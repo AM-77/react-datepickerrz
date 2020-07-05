@@ -9,7 +9,7 @@ function DayCell(props) {
       onClick={() => onDateChange({ ...initDate, d: index + 1 })}
       className={`${styles.day} ${
         index + 1 === initDate.d ? styles.active : ``
-      }`}
+        }`}
     >
       <div
         className={styles.day_contianer}
